@@ -29,6 +29,9 @@ call plug#begin('~/.vim/plugged')
   " Make sure that Spell Check shows up
   Plug 'osamuaoki/vim-spell-under'
 
+  " Advanced substitution and abbreviations
+  Plug 'tpope/vim-abolish'
+
   " Git commands such as Gblame
   Plug 'tpope/vim-fugitive'
 

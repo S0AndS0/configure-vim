@@ -29,6 +29,7 @@ Vim configurations and customizations
   - [Gruvbox][heading__gruvbox]
 
   - [Spell Under][heading__spell_under]
+  - [Abolish][heading__abolish]
 
   - [Fugitive][heading__fugitive]
   - [Commentary][heading__commentary]
@@ -451,6 +452,32 @@ Check the official documentation for configuration guidance.
 
 
 Check the official documentation for configuration guidance.
+
+
+---
+
+
+### Abolish
+[heading__abolish]:
+  #abolish
+  "easily search for, substitute, and abbreviate multiple variants of a word"
+
+
+> [**Source**][source__tpope__vim_abolish]: easily search for, substitute, and abbreviate multiple variants of a word
+
+
+```Vim
+help abolish.txt
+```
+
+
+**Visual mode mappings**
+
+
+- Start `Subvert` search/replace for highlighted text
+
+
+<kbd>Ctrl</kbd>^<kbd>r</kbd>
 
 
 ---
@@ -1481,6 +1508,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [source__osamuaoki__vim_spell_under]:
   https://github.com/osamuaoki/vim-spell-under
   "plugin to change highlight scheme of spelling checker to use \"UNDERLINE\" instead of default \"REVERSE\" for color terminals when `:colorscheme` is set."
+
+[source__tpope__vim_abolish]:
+  https://github.com/tpope/vim-abolish
+  "easily search for, substitute, and abbreviate multiple variants of a word"
 
 [source__tpope__vim_fugitive]:
   https://github.com/tpope/vim-fugitive
