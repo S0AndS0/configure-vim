@@ -112,7 +112,7 @@ PLUG__DOWNLOAD_URL := https://raw.githubusercontent.com/junegunn/vim-plug/master
         uninstall\
         upgrade\
         git-checkout\
-				git-track-changes\
+        git-track-changes\
         git-fetch\
         git-merge\
         git-submodule-update\
@@ -135,7 +135,7 @@ PLUG__DOWNLOAD_URL := https://raw.githubusercontent.com/junegunn/vim-plug/master
          uninstall\
          upgrade\
          git-checkout\
-				 git-track-changes\
+         git-track-changes\
          git-fetch\
          git-merge\
          git-submodule-update\
