@@ -23,6 +23,7 @@ let g:markdown_fenced_languages = [
       \   'lisp',
       \   'make',
       \   'man',
+      \   'mustache',
       \   'perl',
       \   'php',
       \   'python',
