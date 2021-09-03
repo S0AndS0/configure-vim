@@ -1296,7 +1296,7 @@ Thanks for even considering it!
 Via Liberapay you may <sub>[![sponsor__shields_io__liberapay]][sponsor__link__liberapay]</sub> on a repeating basis.
 
 
-Regardless of if you're able to financially support projects such as configure-vim that S0AndS0 maintains, please consider sharing projects that are useful with others, because one of the goals of maintaining Open Source repositories is to provide value to the community.
+Regardless of if you're able to financially support projects that S0AndS0 maintains, please consider sharing projects that are useful with others, because one of the goals of maintaining Open Source repositories is to provide value to the community.
 
 
 ______
