@@ -44,6 +44,8 @@ Vim configurations and customizations
   - [Splits Jump][heading__splits_jump]
   - [Splits Resize][heading__splits_resize]
 
+  - [Lorem Ipsum][heading__lorem_ipsum]
+
   - [Syntastic][heading__syntastic]
 
   - [You Complete Me][heading__you_complete_me]
@@ -1014,6 +1016,36 @@ help splits-jump.txt
 ---
 
 
+### Lorem Ipsum
+[heading__lorem_ipsum]:
+  #lorem-ipsum
+  "Insert a dummy text of a certain length"
+
+
+> [**Source**][source__vim_scripts__loremipsum]: Insert a dummy text of a certain length
+
+
+**Documentation**
+
+
+```vim
+help loremipsum.txt
+```
+
+
+**Ex mode commands**
+
+
+```vim
+:Loremipsum [WORDCOUNT] [PARAGRAPH_TEMPLATE] [PREFIX POSTFIX]
+
+:Loreplace [REPLACEMENT] [PREFIX] [POSTFIX]
+```
+
+
+---
+
+
 ### Syntastic
 [heading__syntastic]:
   #syntastic
@@ -1504,6 +1536,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [source__vim_syntastic__syntastic]:
   https://github.com/vim-syntastic/syntastic
   "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell"
+
+[source__vim_scripts__loremipsum]:
+  https://github.com/vim-scripts/loremipsum
+  "Insert a dummy text of a certain length"
 
 [configuration__vim_syntastic__syntastic]:
   ../vimrc.d/plugged/syntastic.vim

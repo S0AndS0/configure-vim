@@ -58,6 +58,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-utilities/splits-jump'
   Plug 'vim-utilities/splits-resize'
 
+  " :Loremipsum [wordcount] [paragraph-template] [prefix postfix]
+  Plug 'vim-scripts/loremipsum'
+
   " Check code syntax mistakes
   Plug 'vim-syntastic/syntastic'
 
