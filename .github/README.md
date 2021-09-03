@@ -414,6 +414,15 @@ div>p#foo$*3>a
 Check the official documentation for more mappings and configuration guidance.
 
 
+> Note, this plugin sets `omnifunc=emmet#completeTag`
+
+
+```vim
+set omnifunc=emmet#completeTag
+setlocal omnifunc=emmet#completeTag
+```
+
+
 ---
 
 
