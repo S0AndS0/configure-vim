@@ -3,7 +3,7 @@
 " Performance Options:
 
 " No redrawing while executing macros and scripts
-set lazyredraw        
+set lazyredraw
 
 
 " Disable backups
