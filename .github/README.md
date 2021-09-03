@@ -31,6 +31,8 @@ Vim configurations and customizations
   - [Spell Under][heading__spell_under]
   - [Abolish][heading__abolish]
 
+  - [Expand Region][heading__expand_region]
+
   - [Fugitive][heading__fugitive]
   - [Commentary][heading__commentary]
 
@@ -449,6 +451,37 @@ Check the official documentation for configuration guidance.
 
 
 > [**Source**][source__osamuaoki__vim_spell_under]: plugin to change highlight scheme of spelling checker to use "UNDERLINE" instead of default "REVERSE" for color terminals when `:colorscheme` is set
+
+
+Check the official documentation for configuration guidance.
+
+
+---
+
+
+### Expand Region
+[heading__expand_region]:
+  #expand-region
+  "allows you to visually select increasingly larger regions of text"
+
+
+> [**Source**][source__terryma__vim_expand_region] allows you to visually select increasingly larger regions of text
+
+
+**Documentation**
+
+
+```vim
+help vim-expand-region.txt
+```
+
+
+**Visual mode**
+
+
+- `+` Expand visual selection
+
+- `_` Contract visual selection
 
 
 Check the official documentation for configuration guidance.
@@ -1507,6 +1540,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [source__osamuaoki__vim_spell_under]:
   https://github.com/osamuaoki/vim-spell-under
   "plugin to change highlight scheme of spelling checker to use \"UNDERLINE\" instead of default \"REVERSE\" for color terminals when `:colorscheme` is set."
+
+[source__terryma__vim_expand_region]:
+  https://github.com/terryma/vim-expand-region
+  "allows you to visually select increasingly larger regions of text"
 
 [source__tpope__vim_abolish]:
   https://github.com/tpope/vim-abolish

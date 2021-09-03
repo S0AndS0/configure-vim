@@ -29,6 +29,9 @@ call plug#begin('~/.vim/plugged')
   " Make sure that Spell Check shows up
   Plug 'osamuaoki/vim-spell-under'
 
+  " Expand or contract visual selection with `+` or `_`
+  Plug 'terryma/vim-expand-region'
+
   " Advanced substitution and abbreviations
   Plug 'tpope/vim-abolish'
 
