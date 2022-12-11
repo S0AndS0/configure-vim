@@ -9,6 +9,13 @@ filetype plugin on
 " Customize via `b:match_words` variable
 packadd! matchit
 
+""
+" Filter quickfix or location list with patterns
+" See: {docs} - cfilter-plugin
+" Example: - Cfliter[!] /{pat}/
+" Example: - Lfliter[!] /{pat}/
+packadd! cfilter
+
 
 " Rebind <Leader> key
 let g:mapleader = "\<Space>"
