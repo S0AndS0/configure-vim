@@ -12,5 +12,5 @@ set nowritebackup
 
 
 " Reduce number of columns that syntax highlight will search
-set synmaxcol=1000
+set synmaxcol=2000
 
