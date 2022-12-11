@@ -8,6 +8,7 @@ set number          " Show line numbers
 set relativenumber  " Show relative line numbers
 set nowrap          " Don't auto-wrap on load
 set linebreak       " When lines break do so at word boundary
+set showcmd         " Show commands and motions
 set background=dark
 set colorcolumn=80
 
