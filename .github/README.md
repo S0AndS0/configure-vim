@@ -31,7 +31,11 @@ Vim configurations and customizations
   - [Spell Under][heading__spell_under]
   - [Abolish][heading__abolish]
 
+  - [Vim Prettier][heading__vim_prittier]
+
   - [Expand Region][heading__expand_region]
+
+  - [Vim Solidity (Syntax)][heading__vim_solidity_syntax]
 
   - [Fugitive][heading__fugitive]
   - [Commentary][heading__commentary]
@@ -190,6 +194,28 @@ git config --global user.email='Name@Domain.TLD'
 ---
 
 
+For Solidity compiler `npm` and `truffle` are required
+
+
+```bash
+npm install -g truffle
+```
+
+
+---
+
+
+For Prettier `yarn` is required
+
+
+```bash
+npm install -g yarn
+```
+
+
+---
+
+
 To install all known package-manager based dependencies something like the following may be useful...
 
 
@@ -332,6 +358,29 @@ help gitgutter.txt
 
 
 Check the official documentation for more mappings and configuration guidance.
+
+
+---
+
+
+### Solidity Compiler
+[heading__solidity_compiler]:
+  #solidity-compiler
+  "Plugin for compiling Solidity smart contracts"
+
+
+> [**Source**][source__dmdque__solidity_vim]
+
+
+Run Ex mode `:make` command within any `.sol` file
+
+
+```vim
+:make
+```
+
+
+Tip, check [`trufflesuite/truffle` issue `2217`](https://github.com/trufflesuite/truffle/issues/2217) if _"EACCESS: permission denied"_ errors pop.
 
 
 ---
@@ -490,6 +539,18 @@ Check the official documentation for configuration guidance.
 ---
 
 
+### Vim Solidity (Syntax)
+[heading__vim_solidity_syntax]:
+  #vim-solidity-syntax
+  "Syntax files for Solidity, the contract-oriented programming language for Ethereum"
+
+
+> [**Source**][source__tomlion__vim_solidity]: Syntax files for Solidity, the contract-oriented programming language for Ethereum
+
+
+---
+
+
 ### Abolish
 [heading__abolish]:
   #abolish
@@ -511,6 +572,36 @@ help abolish.txt
 
 
 <kbd>Ctrl</kbd>^<kbd>r</kbd>
+
+
+---
+
+
+### Vim Prettier
+[heading__vim_prettier]:
+  #vim-prettier
+  "Vim plugin wrapper for Prettier"
+
+
+> [**Source**][source__prettier__vim_prettier]: Vim plugin wrapper for Prettier
+
+> Note [Solidity Prettier plugin][source__prettier_solidity__prettier_plugin_solidity] is included when installing this Vim plugin.
+
+
+**Documentation**
+
+
+```Vim
+help vim-prettier.txt
+```
+
+
+**Ex mode commands**
+
+
+```Vim
+:Prettier
+```
 
 
 ---
@@ -1525,6 +1616,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   https://github.com/airblade/vim-gitgutter
   "A Vim plugin which shows a git diff in the sign column"
 
+[source__dmdque__solidity_vim]:
+  https://github.com/dmdque/solidity.vim
+  "Plugin for compiling Solidity smart contracts"
+
 [source__leafgarland__typescript_vim]:
   https://github.com/leafgarland/typescript-vim
   "Syntax file and other settings for TypeScript"
@@ -1545,9 +1640,21 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   https://github.com/terryma/vim-expand-region
   "allows you to visually select increasingly larger regions of text"
 
+[source__tomlion__vim_solidity]:
+  https://github.com/tomlion/vim-solidity
+  "Syntax files for Solidity, the contract-oriented programming language for Ethereum"
+
 [source__tpope__vim_abolish]:
   https://github.com/tpope/vim-abolish
   "easily search for, substitute, and abbreviate multiple variants of a word"
+
+[source__prettier__vim_prettier]:
+  https://github.com/prettier/vim-prettier
+  "Vim plugin wrapper for Prettier"
+
+[source__prettier_solidity__prettier_plugin_solidity]:
+  https://github.com/prettier-solidity/prettier-plugin-solidity
+  "A Prettier plugin for automatically formatting your Solidity code"
 
 [source__tpope__vim_fugitive]:
   https://github.com/tpope/vim-fugitive
