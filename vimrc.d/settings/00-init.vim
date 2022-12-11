@@ -14,3 +14,12 @@ set nocompatible
 " Disallow `:autocmd` and write commands within '.vimrc'
 set secure
 
+
+" Ignore case when completing directory/file names
+set wildignorecase
+
+
+" Ignore certain directories for path expansion
+" set wildignore+=*/.git/*,*/tmp/*
+set wildignore+=*/.git/*
+
