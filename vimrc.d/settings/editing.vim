@@ -1,3 +1,4 @@
+set spell
 
 ""
 " Thanks
@@ -7,7 +8,8 @@ set backspace=indent,eol,start
 
 " -----
 "  Allow cursor while in Normal mode to be placed after last character
-set virtualedit=onemore
+" set virtualedit=onemore
+set virtualedit=block
 
 
 ""
