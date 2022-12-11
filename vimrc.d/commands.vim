@@ -12,3 +12,9 @@ command! MakeTags !ctags -R .
 " THINGS TO CONSIDER:
 " - This doesn't help if you want a visual list of tags
 
+
+""
+" Execute visual selection in default shell
+command! -range ShellRange execute '!' . join(getline(<line1>, <line2>), ';')
+vnoremap <Leader>ex :ShellRange<CR>
+
