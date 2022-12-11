@@ -1,3 +1,8 @@
+""
+" See: `help vimdiff`
+if &diff
+  finish
+endif
 
 " ------
 " Netrw customization
@@ -10,6 +15,11 @@ let g:netrw_liststyle=3     " tree view
 " Show all files
 let g:netrw_hide = 1
 let g:netrw_list_hide = '.*\.swp$'
+
+""
+" Show relative line numbers
+" See `:help netrw-P19`
+let g:netrw_bufsettings="noma nomod nonu nobl nowrap ro rnu"
 
 
 function! s:NetRW__Project_Drawer__Open() abort
@@ -26,8 +36,8 @@ function! s:NetRW__Project_Drawer__Open() abort
     return
   endif
 
-  :Lexplore $PWD
-  :wincmd l
+  Lexplore $PWD
+  wincmd l
 endfunction
 
 
@@ -44,7 +54,7 @@ augroup END
 " https://www.reddit.com/r/vim/comments/b00bcq/how_to_automatically_close_netrw_when_exiting_a/
 function! s:NetRW__Project_Drawer__Close() abort
   if winnr("$") == 1 && getbufvar(winbufnr(winnr()), "&filetype") == 'netrw'
-    q
+    quit
   endif
 endfunction
 
