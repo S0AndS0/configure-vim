@@ -86,6 +86,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-utilities/balanced-braces'
   Plug 'vim-utilities/balanced-quotes'
 
+  " Insert date time or replace visually selected format strings
+  Plug 'vim-utilities/date-time'
+
   ""
   " MarkDown specific conveniences
   Plug 'vim-utilities/emoji-syntax'

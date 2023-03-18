@@ -43,6 +43,7 @@ Vim configurations and customizations
   - [Balanced Backspace][heading__balanced_backspace]
   - [Balanced Braces][heading__balanced_braces]
   - [Balanced Quotes][heading__balanced_quotes]
+  - [Date Time][heading__date_time]
   - [Emoji Syntax][heading__emoji_syntax]
   - [MarkDown Headings][heading__markdown_headings]
   - [MarkDown Surrounds][heading__markdown_surrounds]
@@ -823,6 +824,41 @@ Behaviour may be modified for individual, or all, file-types recognized by Vim; 
 
 
 [**Configuration**][configuration__vim_utilities__balanced_quotes]
+
+
+---
+
+
+### Date time
+[heading__date_time]:
+  #date-time
+  "Commands for injecting date and/or time into current buffer"
+
+
+> [**Source**][source__vim_utilities__date_time]: Commands for injecting date and/or time into current buffer
+
+
+**Documentation**
+
+
+```Vim
+:help date-time.txt
+```
+
+
+**Normal mode mappings**
+
+
+- `<Leader>d` Append current date after cursor position
+- `<Leader>D` Insert current date before/at cursor position
+
+- `<Leader>t` Append current time after cursor position
+- `<Leader>T` Insert current time before/at cursor position
+
+
+**Visual select mode mappings**
+
+- `<Leader>R` Replace visual selection with date/time
 
 
 ---
@@ -1687,6 +1723,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [configuration__vim_utilities__balanced_quotes]:
   ../vimrc.d/plugged/balanced-quotes.vim
   "Configuration for Balanced Quotes plugin"
+
+[source__vim_utilities__date_time]:
+  https://github.com/vim-utilities/date-time/
+  "Commands for injecting date and/or time into current buffer"
 
 [source__vim_utilities__emoji_syntax]:
   https://github.com/vim-utilities/emoji-syntax
