@@ -8,7 +8,7 @@
 "   https://vi.stackexchange.com/questions/19675/
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-d>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-d>"
 
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
