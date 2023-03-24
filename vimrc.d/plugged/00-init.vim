@@ -129,5 +129,9 @@ call plug#begin('~/.vim/plugged')
   "   --ts-completer     $> cd <npm_project> && npm install --save-dev typescript
   Plug 'ycm-core/YouCompleteMe', { 'do': 'CXX=$(which g++-8) ./install.py --clang-completer --cs-completer --go-completer --java-completer --rust-completer --ts-completer' }
 
+  ""
+  "
+  Plug 'rust-lang/rust.vim', { 'do': 'rustup component add rust-src' }
+
 call plug#end()
 

@@ -54,6 +54,8 @@ Vim configurations and customizations
 
   - [Lorem Ipsum][heading__lorem_ipsum]
 
+  - [Rust Vim][heading__rust_vim]
+
   - [Syntastic][heading__syntastic]
 
   - [You Complete Me][heading__you_complete_me]
@@ -152,6 +154,19 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #> Add and download TypeScript to project dependencies
 cd <project> && npm install --save-dev typescript
 ```
+
+
+---
+
+
+For Rust Vim plugin, in addition to Rust it may be necessary to explicitly install the analyzer too
+
+
+```bash
+rustup component add rust-src
+```
+
+... Though provided that `rustup` is installed, then `make install` will attempt to do above via `PlugInstall` commands.
 
 
 ---
@@ -1242,6 +1257,32 @@ help loremipsum.txt
 ---
 
 
+### Rust Vim
+[heading__rust_vim]: #rust-vim
+
+
+> [**Source**][source__rust_vim]: 
+
+
+**Documentation**
+
+
+```Vim
+help rust.txt
+
+help rust-syntastic.txt
+```
+
+
+Check the official documentation for configuration guidance.
+
+
+[**Configuration**][configuration__rust_vim]
+
+
+---
+
+
 ### Syntastic
 [heading__syntastic]:
   #syntastic
@@ -1509,6 +1550,10 @@ ______
 
 - [GitHub -- `tpope/vim-markdown`](https://github.com/tpope/vim-markdown)
 
+- [GitHub -- `tran-simon/fuchsia` -- `docs/development/languages/rust/editors.md`](https://github.com/tran-simon/fuchsia/blob/main/docs/development/languages/rust/editors.md#vim )
+
+- [Rust Analizer -- Installation](https://rust-analyzer.github.io/manual.html#installation)
+
 - [Shapeshed -- Vim: you don't need NERDtree or (maybe) netrw](https://shapeshed.com/vim-netrw/)
 
 - [Shortcut Foo -- Top 50 Vim Configuration Options](https://www.shortcutfoo.com/blog/top-50-vim-configuration-options/)
@@ -1756,6 +1801,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   https://github.com/vim-utilities/splits-resize
   "Vim plugin for re-sizing splits swiftly"
 
+[source__rust_vim]:
+  https://github.com/rust-lang/rust.vim
+  "Vim configuration for Rust "
+
 [source__vim_syntastic__syntastic]:
   https://github.com/vim-syntastic/syntastic
   "Syntastic is a syntax checking plugin for Vim created by Martin Grenfell"
@@ -1767,6 +1816,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [configuration__vim_syntastic__syntastic]:
   ../vimrc.d/plugged/syntastic.vim
   "Configuration for Syntastic plugin"
+
+[configuration__rust_vim]:
+  ../vimrc.d/plugged/rust.vim
+  "Configuration for Rust plugin"
 
 [source__ycm_core__youcompleteme]:
   https://github.com/ycm-core/YouCompleteMe

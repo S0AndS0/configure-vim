@@ -19,6 +19,11 @@ let g:ycm_clangd_binary_path = '/usr/bin/gcc'
 "       \   'markdown': 1
 "       \ }
 
+""
+" https://github.com/ycm-core/YouCompleteMe/wiki/FAQ#im-using-rust-with-ycm-and-this-causes-breaks-incremental-builds-of-my-project
+" TLDR: YouCompleteMe and Rust otherwise will battle for build cache access
+"       which causes unnecessary re-builds of dependencies and such
+let g:ycm_rust_toolchain_root = $HOME . '/.local'
 
 ""
 " Mappings:
