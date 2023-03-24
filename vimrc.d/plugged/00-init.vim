@@ -133,5 +133,9 @@ call plug#begin('~/.vim/plugged')
   "
   Plug 'rust-lang/rust.vim', { 'do': 'rustup component add rust-src' }
 
+  ""
+  "
+  Plug 'adrienverge/yamllint', { 'do': 'pip install --user yamllint' }
+
 call plug#end()
 
