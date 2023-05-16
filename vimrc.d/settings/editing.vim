@@ -17,3 +17,6 @@ set virtualedit=block
 " See: `help nrformats`
 set nrformats+=alpha
 
+""
+" https://stackoverflow.com/questions/69780160/open-many-files-over-10-in-separate-tabs-at-once-in-vim
+set tabpagemax=99
