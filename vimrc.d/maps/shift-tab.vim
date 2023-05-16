@@ -1,3 +1,14 @@
+#!/usr/bin/env vim
+
+""
+" https://stackoverflow.com/questions/16622566/how-to-solve-the-collision-of-tab-key-mapping-of-ultisnips-plugin-in-the-vim
+""
+
+nnoremap > v>
+nnoremap < v<
+
+nnoremap > >gv
+nnoremap < <gv
 
 ""
 " Thanks be to:
