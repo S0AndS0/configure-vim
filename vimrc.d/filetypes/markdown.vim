@@ -54,3 +54,11 @@ let g:markdown_fenced_languages = [
       \   'xml',
       \ ]
 
+function! s:Register_Settings__MarkDown()
+  setlocal expandtab
+  setlocal shiftwidth=2
+  setlocal softtabstop=2
+  setlocal tabstop=2
+endfunction
+autocmd FileType markdown call s:Register_Settings__MarkDown()
+
