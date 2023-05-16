@@ -15,6 +15,7 @@ let g:markdown_fenced_languages = [
       \   'css',
       \   'diff',
       \   'fstab',
+      \   'gdb',
       \   'gitconfig',
       \   'go',
       \   'html',
