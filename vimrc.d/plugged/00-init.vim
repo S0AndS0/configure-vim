@@ -20,6 +20,9 @@ call plug#begin('~/.vim/plugged')
   " Draw boxes around visual selection with `+`
   Plug 'gyim/vim-boxdraw'
 
+  "
+  Plug 'hashivim/vim-terraform'
+
   " TypeScript syntax and stuff
   Plug 'leafgarland/typescript-vim'
 

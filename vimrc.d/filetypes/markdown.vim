@@ -48,6 +48,7 @@ let g:markdown_fenced_languages = [
       \   'sshdconfig',
       \   'systemd',
       \   'sql',
+      \   'terraform',
       \   'toml',
       \   'vim',
       \   'viminfo',
