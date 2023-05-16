@@ -12,6 +12,9 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_loc_list_height = 5
 
+""
+" Do not compete with file-type powered syntax highlighting
+let g:syntastic_enable_highlighting = 0
 
 ""
 " Syntastic checker configurations
