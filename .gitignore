@@ -1,2 +1,9 @@
+## Vim (BTW™)
 *.swp
+
+## Make Script
 .config*
+
+## Cruft unfit to track
+dev
+
