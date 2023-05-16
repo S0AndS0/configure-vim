@@ -29,7 +29,8 @@ Vim configurations and customizations
   - [Gruvbox][heading__gruvbox]
 
   - [Spell Under][heading__spell_under]
-  - [Abolish][heading__abolish]
+
+  - [UltiSnips][heading__ultisnips]
 
   - [Vim Prettier][heading__vim_prittier]
 
@@ -523,6 +524,37 @@ Check the official documentation for configuration guidance.
 
 ---
 
+
+### UltiSnips
+[heading__ultisnips]:
+  #ultisnips
+  "UltiSnips - The ultimate snippit solution for Vim"
+
+
+> [**Source**][source__sirVer__ultisnips]: UltiSnips - The ultimate snippit solution for Vim
+
+
+**Insert mode**
+
+
+- <kbd>Ctrl</kbd> ^ <kbd>Enter</kbd> → Expand snippit
+- <kbd>Tab</kbd> → Next tab-stop
+- <kbd>Shift</kbd> ^ <kbd>Tab</kbd> → Previous tab-stop
+
+
+**Warning** for `<C-CR>` to be passed to Vim correctly may, often will, require
+configuring the terminal emulator too;
+
+
+- Alacritty `~/.config/alacritty/alacritty.yml` (snip)
+
+   ```yaml
+   key_bindings:
+     - { key: Return,  mods: Control,  chars: "\x1b[13;5u" }
+   ```
+
+
+---
 
 ### Expand Region
 [heading__expand_region]:
@@ -1716,6 +1748,10 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [source__osamuaoki__vim_spell_under]:
   https://github.com/osamuaoki/vim-spell-under
   "plugin to change highlight scheme of spelling checker to use \"UNDERLINE\" instead of default \"REVERSE\" for color terminals when `:colorscheme` is set."
+
+[source__sirVer__ultisnips]:
+  https://github.com/SirVer/ultisnips
+  "UltiSnips - The ultimate snippit solution for Vim"
 
 [source__terryma__vim_expand_region]:
   https://github.com/terryma/vim-expand-region

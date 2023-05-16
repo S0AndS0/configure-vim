@@ -23,6 +23,10 @@ call plug#begin('~/.vim/plugged')
   "
   Plug 'hashivim/vim-terraform'
 
+  ""
+  " Vim SnipMate and UltiSnip snippets
+  Plug 'honza/vim-snippets'
+
   " TypeScript syntax and stuff
   Plug 'leafgarland/typescript-vim'
 
@@ -67,6 +71,10 @@ call plug#begin('~/.vim/plugged')
 
   " Display tags in buffer ordered by scope
   Plug 'preservim/tagbar'
+
+  ""
+  " UltiSnips - The ultimate snippit solution for Vim
+  Plug 'SirVer/ultisnips'
 
   " Expand or contract visual selection with `+` or `_`
   Plug 'terryma/vim-expand-region'
