@@ -32,7 +32,7 @@ Vim configurations and customizations
 
   - [UltiSnips][heading__ultisnips]
 
-  - [Vim Prettier][heading__vim_prittier]
+  - [Vim Prettier][heading__vim_prettier]
 
   - [Expand Region][heading__expand_region]
 
