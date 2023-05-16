@@ -1293,7 +1293,7 @@ help loremipsum.txt
 [heading__rust_vim]: #rust-vim
 
 
-> [**Source**][source__rust_vim]: 
+> [**Source**][source__rust_vim]
 
 
 **Documentation**
@@ -1580,11 +1580,15 @@ ______
 
 - [GitHub Gist -- `jackkinsella/.vimrc`](https://gist.github.com/jackkinsella/aa7374a6832cca8a09eadc3434a33c24#file-vimrc-L544)
 
+- [GitHub -- `rust-lang/rustup` -- Issue `2411`](https://github.com/rust-lang/rustup/issues/2411)
+
 - [GitHub -- `tpope/vim-markdown`](https://github.com/tpope/vim-markdown)
 
 - [GitHub -- `tran-simon/fuchsia` -- `docs/development/languages/rust/editors.md`](https://github.com/tran-simon/fuchsia/blob/main/docs/development/languages/rust/editors.md#vim )
 
-- [Rust Analizer -- Installation](https://rust-analyzer.github.io/manual.html#installation)
+- [Rust Analyzer -- Installation](https://rust-analyzer.github.io/manual.html#installation)
+
+- [Rust Analyzer -- Installation](https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary)
 
 - [Shapeshed -- Vim: you don't need NERDtree or (maybe) netrw](https://shapeshed.com/vim-netrw/)
 
