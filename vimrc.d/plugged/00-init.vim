@@ -43,11 +43,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'mustache/vim-mustache-handlebars'
 
   ""
-  "
   " https://github.com/prettier/vim-prettier#overwrite-default-prettier-configuration
   " https://github.com/rx-ts/prettier/tree/master/packages/sh
+  " https://github.com/hugomrdias/prettier-stylelint
   Plug 'prettier/vim-prettier', {
-        \   'do': 'yarn install && yarn add prettier-plugin-solidity && yarn add prettier-plugin-sh',
+        \   'do': 'yarn install && yarn add prettier-plugin-solidity && yarn add prettier-plugin-sh && yarn add prettier-stylelint',
         \   'for': [
         \     'css',
         \     'graphql',
