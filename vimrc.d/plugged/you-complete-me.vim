@@ -23,7 +23,23 @@ let g:ycm_clangd_binary_path = '/usr/bin/gcc'
 " https://github.com/ycm-core/YouCompleteMe/wiki/FAQ#im-using-rust-with-ycm-and-this-causes-breaks-incremental-builds-of-my-project
 " TLDR: YouCompleteMe and Rust otherwise will battle for build cache access
 "       which causes unnecessary re-builds of dependencies and such
-let g:ycm_rust_toolchain_root = $HOME . '/.local'
+"
+" ```bash
+" rustup component add rust-src
+" ```
+"
+" ```bash
+" tee -a ~/.vimrc.d/plugged/00-init.vim <<'EOF'
+" call plug#begin('~/.vim/plugged')
+"   Plug 'rust-lang/rust.vim'
+" call plug#end()
+" EOF
+" ```
+"
+" ```vim
+" PlugInstall rust.vim
+" ```
+let g:ycm_rust_toolchain_root = $HOME . '/.cargo'
 
 ""
 " Mappings:
