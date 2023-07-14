@@ -91,6 +91,10 @@ call plug#begin('~/.vim/plugged')
   " Comment and uncomment code
   Plug 'tpope/vim-commentary'
 
+  " https://stackoverflow.com/questions/15723209/better-autocomplete-in-vim
+  Plug 'tpope/vim-rails'
+  Plug 'vim-ruby/vim-ruby'
+
   ""
   " Balance symbol insertion and removal
   Plug 'vim-utilities/balanced-backspace'
