@@ -2,7 +2,7 @@
 ""
 " Emmet configurations
 let g:user_emmet_install_global = 0
-autocmd FileType css,html,liquid EmmetInstall
+autocmd FileType css,html,liquid,markdown EmmetInstall
 
 ""
 " Customized from `~/.vim/plugged/emmet-vim/autoload/emmet.vim`
@@ -22,5 +22,8 @@ let g:user_emmet_settings = {
 \    },
 \    'liquid': {
 \      'extends': 'html',
+\    },
+\    'markdown': {
+\      'extends': 'liquid',
 \    },
 \}
