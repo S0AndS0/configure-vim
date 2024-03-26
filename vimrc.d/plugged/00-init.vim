@@ -17,6 +17,9 @@ call plug#begin('~/.vim/plugged')
   "  Note, requires 'npm install -g truffle'
   Plug 'dmdque/solidity.vim'
 
+  " Get `:GoBuild` and other features
+  Plug 'fatih/vim-go'
+
   " Draw boxes around visual selection with `+`
   Plug 'gyim/vim-boxdraw'
 
