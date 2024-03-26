@@ -137,7 +137,7 @@ call plug#begin('~/.vim/plugged')
   ""
   " Auto completion engine for Vim
   "   --clang-completer  $> sudo apt-get install g++-8
-  "   --clang-completer  $> sudo pacman install gcc
+  "   --clang-completer  $> sudo pacman -S gcc
   "
   "   --cs-completer     $> sudo apt-get install ???
   "
@@ -145,7 +145,7 @@ call plug#begin('~/.vim/plugged')
   "   --go-completer     $> sudo pacman -S go
   "
   "   --java-completer   $> sudo apt-get install openjdk-8-jdk
-  "   --java-completer   $> sudo pacman -S jdk8-openjdk
+  "   --java-completer   $> sudo pacman -S jdk-openjdk
   "
   "   --rust-completer   $> curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   "   --ts-completer     $> cd <npm_project> && npm install --save-dev typescript
@@ -154,7 +154,8 @@ call plug#begin('~/.vim/plugged')
   " Plug 'ycm-core/YouCompleteMe', { 'do': 'CXX=$(which g++-8) ./install.py --clang-completer --cs-completer --go-completer --java-completer --rust-completer --ts-completer' }
   "
   " Arch (BTW™)
-  Plug 'ycm-core/YouCompleteMe', { 'do': 'CXX=$(which g++-8) ./install.py --clang-completer --cs-completer --go-completer --java-completer --rust-completer --ts-completer' }
+  " Plug 'ycm-core/YouCompleteMe', { 'do': 'CXX=$(which g++-8) ./install.py --clang-completer --cs-completer --go-completer --java-completer --rust-completer --ts-completer' }
+  Plug 'ycm-core/YouCompleteMe', { 'do': 'CXX=$(which g++) ./install.py --clang-completer --cs-completer --go-completer --java-completer --rust-completer --ts-completer' }
 
   ""
   "
