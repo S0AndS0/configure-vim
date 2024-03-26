@@ -66,6 +66,9 @@ let g:markdown_fenced_languages = [
 
 let g:markdown_yaml_head = 1
 
+" @TODO: figure out how to make it play nice with `markdown.liquid` filetype
+let g:markdown_folding = 1
+
 function! s:Register_Settings__MarkDown() abort
   setlocal expandtab
   setlocal shiftwidth=2
