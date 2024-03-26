@@ -55,8 +55,10 @@ endif
 
 ifeq '$(__OS__)' 'Windows'
 	__PATH_SEPARATOR__ := \\
+	BASH_PATH := $(shell where bash)
 else
 	__PATH_SEPARATOR__ := /
+	BASH_PATH := $(shell which bash)
 endif
 
 
@@ -153,13 +155,13 @@ PLUG__DOWNLOAD_URL := https://raw.githubusercontent.com/junegunn/vim-plug/master
          list
 
 
-clean: SHELL := /bin/bash
+clean: SHELL := $(BASH_PATH)
 clean: ## Removes configuration file
 	[[ -f "$(CONFIG_PATH)" ]] && {
 		rm -v "$(CONFIG_PATH)"
 	}
 
-config: SHELL := /bin/bash
+config: SHELL := $(BASH_PATH)
 config: ## Writes configuration file
 	tee "$(CONFIG_PATH)" 1>/dev/null <<EOF
 	INSTALL_DIRECTORY = $(INSTALL_DIRECTORY)
@@ -190,7 +192,7 @@ git-upgrades: | git-checkout git-fetch git-track-changes git-merge git-submodule
 
 ##
 #
-git-checkout: SHELL := /bin/bash
+git-checkout: SHELL := $(BASH_PATH)
 git-checkout: ## Checkout Git branch to track local changes
 	cd "$(ROOT_DIRECTORY_PATH)"
 	_git_branches="$$(git branch --list)"
@@ -202,24 +204,24 @@ git-checkout: ## Checkout Git branch to track local changes
 		git checkout -b "$${#_local_branch}"
 	fi
 
-git-track-changes: SHELL := /bin/bash
+git-track-changes: SHELL := $(BASH_PATH)
 git-track-changes: ## Runs `git add --all && git commit -m ':robot: Tracks local customizations'`
 	cd "$(ROOT_DIRECTORY_PATH)"
 	if grep -qE -- '^Untracked files|^Changes to be committed|^Changes not staged' <<<"$$(git status)"; then
 		git add --all && git commit -m ':robot: Tracks local customizations'
 	fi
 
-git-fetch: SHELL := /bin/bash
+git-fetch: SHELL := $(BASH_PATH)
 git-fetch: ## Fetches updates from Git remote
 	cd "$(ROOT_DIRECTORY_PATH)"
 	git fetch $(GIT_REMOTE__NAME) $(GIT_REMOTE__BRANCH)
 
-git-merge: SHELL := /bin/bash
+git-merge: SHELL := $(BASH_PATH)
 git-merge: ## Merges changes from Git remote
 	cd "$(ROOT_DIRECTORY_PATH)"
 	git merge --strategy-option ours --squash "$(GIT_REMOTE__BRANCH)"
 
-git-submodule-update: SHELL := /bin/bash
+git-submodule-update: SHELL := $(BASH_PATH)
 git-submodule-update: ## Runs update commands for Git submodules
 	cd "$(ROOT_DIRECTORY_PATH)"
 	git submodule update --init --merge --recursive
@@ -233,7 +235,7 @@ link-all: link-vimrc link-vimrc-d
 unlink-all: ## Runs targets -> unlink-vimrc unlink-vimrc-d
 unlink-all: unlink-vimrc unlink-vimrc-d
 
-link-vimrc: SHELL := /bin/bash
+link-vimrc: SHELL := $(BASH_PATH)
 link-vimrc: ## Symbolically links project configuration file
 	if [[ -L "$(VIMRC__INSTALL_PATH)" ]]; then
 		printf >&2 'Link already exists -> %s\n' "$(VIMRC__INSTALL_PATH)"
@@ -243,7 +245,7 @@ link-vimrc: ## Symbolically links project configuration file
 		ln -sv "$(VIMRC__SOURCE_PATH)" "$(VIMRC__INSTALL_PATH)"
 	fi
 
-unlink-vimrc: SHELL := /bin/bash
+unlink-vimrc: SHELL := $(BASH_PATH)
 unlink-vimrc: ## Removes symbolic links to project configuration file
 	if [[ -L "$(VIMRC__INSTALL_PATH)" ]]; then
 		rm -v "$(VIMRC__INSTALL_PATH)"
@@ -253,7 +255,7 @@ unlink-vimrc: ## Removes symbolic links to project configuration file
 		printf >&2 'Error: no link to remove at -> %s\n' "$(VIMRC__INSTALL_PATH)"
 	fi
 
-link-vimrc-d: SHELL := /bin/bash
+link-vimrc-d: SHELL := $(BASH_PATH)
 link-vimrc-d: ## Symbolically links project vimrc.d directory file(s)
 	linker() {
 		local _source_path="$${1?No source path provided}"
@@ -281,7 +283,7 @@ link-vimrc-d: ## Symbolically links project vimrc.d directory file(s)
 	}
 	linker "$(VIMRC_D__SOURCE_DIR)" "$(VIMRC_D__INSTALL_DIR)"
 
-unlink-vimrc-d: SHELL := /bin/bash
+unlink-vimrc-d: SHELL := $(BASH_PATH)
 unlink-vimrc-d: ## Removes symbolic links to project vimrc.d directory file(s)
 	unlinker() {
 		local _source_path="$${1?No source path provided}"
@@ -311,11 +313,11 @@ unlink-vimrc-d: ## Removes symbolic links to project vimrc.d directory file(s)
 
 ##
 #
-plug-clean: SHELL := /bin/bash
+plug-clean: SHELL := $(BASH_PATH)
 plug-clean: ## Runs `PlugClean` command within Vim Ex mode, which deletes unlisted plugins
 	vim -c 'PlugClean' -c 'qa'
 
-plug-download: SHELL := /bin/bash
+plug-download: SHELL := $(BASH_PATH)
 plug-download: ## Downloads `plug.vim` script, if not already present, to `$(PLUG__INSTALL_PATH)`
 	if [[ -f "$(PLUG__INSTALL_PATH)" ]]; then
 		printf >&2 'Skipping download of -> %s\n' "$(PLUG__INSTALL_PATH)"
@@ -323,19 +325,19 @@ plug-download: ## Downloads `plug.vim` script, if not already present, to `$(PLU
 		curl -fLo "$(PLUG__INSTALL_PATH)" --create-dirs "$(PLUG__DOWNLOAD_URL)"
 	fi
 
-plug-install: SHELL := /bin/bash
+plug-install: SHELL := $(BASH_PATH)
 plug-install: ## Runs `PlugInstall` command within Vim Ex mode, which installs Vim plugins
 	vim -c 'PlugInstall' -c 'qa'
 
-plug-update: SHELL := /bin/bash
+plug-update: SHELL := $(BASH_PATH)
 plug-update: ## Runs `PlugUpdate` command within Vim Ex mode, which updates Vim plugins
 	vim -c 'PlugUpdate' -c 'qa'
 
-plug-upgrade: SHELL := /bin/bash
+plug-upgrade: SHELL := $(BASH_PATH)
 plug-upgrade: ## Runs `PlugUpgrade` command within Vim Ex mode, which upgrades Plug script
 	vim -c 'PlugUpgrade' -c 'qa'
 
-plug-uninstall: SHELL := /bin/bash
+plug-uninstall: SHELL := $(BASH_PATH)
 plug-uninstall: ## 
 	if [[ -f "$(PLUG__INSTALL_PATH)" ]]; then
 		rm -v "$(PLUG__INSTALL_PATH)"
@@ -346,7 +348,7 @@ plug-uninstall: ##
 
 ##
 #
-list: SHELL := /bin/bash
+list: SHELL := $(BASH_PATH)
 list: ## Lists available make commands
 	gawk 'BEGIN {
 		delete matched_lines
