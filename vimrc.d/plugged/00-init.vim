@@ -39,6 +39,9 @@ call plug#begin('~/.vim/plugged')
   " Make sure that Spell Check shows up
   Plug 'osamuaoki/vim-spell-under'
 
+  " LaTeX syntax and compiler
+  Plug 'lervag/vimtex'
+
   " Handlebars and mustache syntax support
   Plug 'mustache/vim-mustache-handlebars'
 
