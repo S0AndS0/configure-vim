@@ -17,6 +17,9 @@ nnoremap < <gv
 "
 "   Cycle through autocomplete menu using tab
 "   https://vi.stackexchange.com/questions/19675/
+"
+" WARNING: Conflicts with UtliSnips
+""
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-d>"
