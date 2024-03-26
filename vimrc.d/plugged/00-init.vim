@@ -162,8 +162,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim', { 'do': 'rustup component add rust-src' }
 
   ""
-  "
-  Plug 'adrienverge/yamllint', { 'do': 'pip install --user yamllint' }
+  " Attempts to install via `pipx` if available before resorting to user level
+	" pip installation
+	Plug 'adrienverge/yamllint', { 'do': 'if [[ -x "$(which pipx)" ]]; then pipx install yamllint; else pip install --user yamllint; fi' }
 
 call plug#end()
 
