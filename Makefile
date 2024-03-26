@@ -2,7 +2,7 @@
 
 
 # Install/Uninstall make script for S0AndS0/configure-vim
-# Copyright (C) 2023 S0AndS0
+# Copyright (C) 2024 S0AndS0
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published
@@ -27,7 +27,7 @@ path_append = $(strip $(1))$(strip $(__PATH_SEPARATOR__))$(strip $(2))
 #    Make variables to satisfy conventions
 #
 NAME = configure-vim
-VERSION = 0.0.1
+VERSION = 0.0.2
 PKG_NAME = $(NAME)-$(VERSION)
 
 
