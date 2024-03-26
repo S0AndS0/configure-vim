@@ -22,6 +22,8 @@ Vim configurations and customizations
 - [&#x1F9F0; Usage][heading__usage]
   - [Vim GitGutter][heading__vim_gitgutter]
 
+  - [Vim Go][heading__vim_go]
+
   - [Typescript Syntax for Vim][heading__typescript_syntax_for_vim]
 
   - [Emmet Vim][heading__emmet_vim]
@@ -85,7 +87,7 @@ Vim configurations and customizations
 Awk, GAwk, or MAwk must be installed to make use of scripts within this repository, for Debian based Linux distributions that'd be similar to...
 
 
-```Bash
+```bash
 sudo apt-get install gawk
 ```
 
@@ -96,27 +98,39 @@ sudo apt-get install gawk
 This repository requires the [Vim][vim_home] text editor to be installed the source code is available on [GitHub -- `vim/vim`][vim__github], and most GNU Linux package managers are able to install Vim directly, eg...
 
 
-- Arch based Operating Systems
+- Arch
 
 
-```Bash
-sudo packman -Syy
+   ```bash
+   sudo packman -Syy
 
-sudo packman -S vim
-```
-
-
-- Debian derived Distributions
+   sudo packman -S gvim
+   ```
 
 
-```Bash
-sudo apt-get update
+- Debian
 
-sudo apt-get install vim
-```
+
+   ```bash
+   sudo apt-get update
+
+   sudo apt-get install gvim
+   ```
+
+- Termux
+
+   ```bash
+   pkg install vim-python
+   ```
 
 
 > Note, some configurations target Vim version 8.2 (or greater) features
+>
+> Note; on desktop distributions for clipboard customization, and various
+> plugins, `gvim` is recommended
+>
+> Note; on mobile environments `vim-python` is recommended if attempting to use
+> YouCompleteMe plugin features
 
 
 ---
@@ -124,37 +138,59 @@ sudo apt-get install vim
 
 For `MakeTags` Vim command ctags must be installed, eg...
 
+- Arch
 
-```Bash
-sudo apt-get install exuberant-ctags
-```
+   ```bash
+   sudo pacman -S ctags
+   ```
+
+- Debian
+
+   ```bash
+   sudo apt-get install exuberant-ctags
+   ```
 
 
 ---
 
 
-For the YouCompleteMe plugin you may need to install additional dependencies via distribution package manager, eg...
+For the YouCompleteMe plugin you may need to install additional dependencies
+via distribution package manager, eg...
 
+- Arch
 
-```Bash
-sudo apt-get update
+   ```bash
+   sudo pacman -S gcc go jdk-openjdk
+   ```
 
-sudo apt-get install g++-8          #> Provides C
-sudo apt-get install golang-go      #> Provided Go
-sudo apt-get install openjdk-8-jdk  #> Provides Java
-```
+- Debian
 
+   ```bash
+   sudo apt-get update
+
+   sudo apt-get install g++-8          #> Provides C
+   sudo apt-get install golang-go      #> Provided Go
+   sudo apt-get install openjdk-8-jdk  #> Provides Java
+   ```
 
 ... as well as manually install Rust and TypeScript via other methods, eg...
 
 
-```Bash
-#> Download and install Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+- Arch / Debian / most other desktop distributions
 
-#> Add and download TypeScript to project dependencies
-cd <project> && npm install --save-dev typescript
-```
+   ```bash
+   #> Download and install Rust
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+   #> Add and download TypeScript to project dependencies
+   cd <project> && npm install --save-dev typescript
+   ```
+
+- Termux
+
+   ```bash
+   pkg install rust
+   ```
 
 
 ---
@@ -162,10 +198,17 @@ cd <project> && npm install --save-dev typescript
 
 For Rust Vim plugin, in addition to Rust it may be necessary to explicitly install the analyzer too
 
+- Arch / Debian / most other desktop distributions
 
-```bash
-rustup component add rust-src
-```
+   ```bash
+   rustup component add rust-src
+   ```
+
+- Termux
+
+   ```bash
+   pkg install rust-src
+   ```
 
 ... Though provided that `rustup` is installed, then `make install` will attempt to do above via `PlugInstall` commands.
 
@@ -175,18 +218,33 @@ rustup component add rust-src
 
 For the Syntastic plugin the `shellcheck` dependency may be installed via distribution package manager...
 
+- Arch
 
-```Bash
-sudo apt-get install shellcheck
-```
+   ```bash
+   sudo pacman -S shellcheck
+   ```
+
+- Debian
+
+   ```bash
+   sudo apt-get install shellcheck
+   ```
 
 
-... as well as `checkbashisms`, which is often bunldled with `devscripts` package...
+... as well as `checkbashisms`, which is often bundled with `devscripts` package...
 
 
-```Bash
-sudo apt-get install devscripts
-```
+- Arch
+
+   ```bash
+   sudo pacman -S checkbashisms
+   ```
+
+- Debian
+
+   ```bash
+   sudo apt-get install devscripts
+   ```
 
 
 > **Warning**, the file-type recognition of Syntastic seems to be a little buggy for Bash script which by default are treated as `sh` scripts!
@@ -230,23 +288,6 @@ npm install -g yarn
 ```
 
 
----
-
-
-To install all known package-manager based dependencies something like the following may be useful...
-
-
-```Bash
-sudo apt-get install exuberant-ctags\
-                     gawk\
-                     g++-8\
-                     golang-go\
-                     openjdk-8-jdk\
-                     shellcheck\
-                     vim
-```
-
-
 ______
 
 
@@ -259,7 +300,7 @@ ______
 Clone this project...
 
 
-```Bash
+```bash
 mkdir -vp ~/git/hub/S0AndS0
 
 cd ~/git/hub/S0AndS0
@@ -271,7 +312,7 @@ git clone git@github.com:S0AndS0/configure-vim.git
 Backup your current configurations...
 
 
-```Bash
+```bash
 [[ -f ~/.vimrc ]] && {
     mv ~/.vimrc ~/.vimrc.bak
 }
@@ -286,7 +327,7 @@ Backup your current configurations...
 Make commands may then be used to install, upgrade, or uninstall configurations...
 
 
-```Bash
+```bash
 make install
 ```
 
@@ -294,7 +335,7 @@ make install
 > The `install` target will make symbolic links for `./vimrc` file and recursively for files within `./vimrc.d/` directory, checkout a local branch for further customization, then download and install plugins via Plug
 
 
-```Bash
+```bash
 make uninstall
 ```
 
@@ -302,7 +343,7 @@ make uninstall
 > The `uninstall` target will remove symbolic links and empty sub-directories within `~/.vimrc.d/`, and remove the Vim script for Plug
 
 
-```Bash
+```bash
 make upgrade
 ```
 
@@ -375,6 +416,24 @@ help gitgutter.txt
 
 
 Check the official documentation for more mappings and configuration guidance.
+
+
+---
+
+
+### Vim Go
+[heading__vim_go]: #vim-go
+
+
+> [**Source**][source__fatih__vim_go]: Go development plugin for Vim
+
+
+After installation via Plug run the following Vim Ex mode command to download
+and install dependencies;
+
+```vim
+:GoInstallBinaries
+```
 
 
 ---
@@ -1503,7 +1562,7 @@ Start making a [Fork][configure_vim__fork_it] of this repository to an account t
 - Add remote for fork URL. The URL syntax is _`git@github.com:<NAME>/<REPO>.git`_...
 
 
-```Bash
+```bash
 cd ~/git/hub/S0AndS0/configure-vim
 
 git remote add fork git@github.com:<NAME>/configure-vim.git
@@ -1513,7 +1572,7 @@ git remote add fork git@github.com:<NAME>/configure-vim.git
 - Commit your changes and push to your fork, eg. to fix an issue...
 
 
-```Bash
+```bash
 cd ~/git/hub/S0AndS0/configure-vim
 
 
@@ -1640,7 +1699,7 @@ ______
 
 ```
 Vim configurations and customizations
-Copyright (C) 2023 S0AndS0
+Copyright (C) 2024 S0AndS0
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -1728,6 +1787,9 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [configuration__junegunn__vim_plug]:
   ../vimrc.d/plugged/00-init.vim
   "Configuration for Plug script"
+
+[source__fatih__vim_go]:
+  https://github.com/fatih/vim-go
 
 [source__airblade__vim_gitgutter]:
   https://github.com/airblade/vim-gitgutter
