@@ -75,6 +75,12 @@ function! s:Register_Settings__MarkDown() abort
   setlocal softtabstop=2
   setlocal tabstop=2
 
+  ""
+  " Do not to break long words when line-wrapping
+  " https://www.youtube.com/watch?v=eX9m3g5J-XA
+  setlocal linebreak
+  setlocal wrap
+
   " Enable semi-support of UltiSnips for Liquid
   setlocal filetype=markdown.liquid
 endfunction
