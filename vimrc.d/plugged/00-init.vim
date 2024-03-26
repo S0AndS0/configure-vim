@@ -27,6 +27,11 @@ call plug#begin('~/.vim/plugged')
   " Vim SnipMate and UltiSnip snippets
   Plug 'honza/vim-snippets'
 
+  ""
+  " Because KDE updates to using Wayland and Wayland/GVim are not yet
+  " compatible for clipboard access
+  Plug 'jasonccox/vim-wayland-clipboard'
+
   " TypeScript syntax and stuff
   Plug 'leafgarland/typescript-vim'
 
