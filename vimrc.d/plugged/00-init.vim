@@ -175,7 +175,7 @@ call plug#begin('~/.vim/plugged')
   ""
   " Attempts to install via `pipx` if available before resorting to user level
 	" pip installation
-	Plug 'adrienverge/yamllint', { 'do': 'if [[ -x "$(which pipx)" ]]; then pipx install yamllint; else pip install --user yamllint; fi' }
+	Plug 'adrienverge/yamllint', { 'do': 'if [[ -x \"$(which pipx)\" ]]; then pipx install yamllint; else pip install --user yamllint; fi' }
 
 call plug#end()
 
