@@ -59,6 +59,11 @@ let g:ycm_language_server = [
       \     'filetypes': [ 'sh', 'bash' ],
       \   },
       \   {
+      \     'name': 'css',
+      \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/css/node_modules/.bin/vscode-css-language-server' ), '--stdio' ],
+      \     'filetypes': [ 'css', 'sass' ],
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
