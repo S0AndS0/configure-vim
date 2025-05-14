@@ -54,6 +54,11 @@ let g:ycm_language_server = [
       \     'project_root_files': [ 'tsconfig.json', 'astro.config.mjs' ]
       \   },
       \   {
+      \     'name': 'bash',
+      \     'cmdline': [ 'node', expand( g:ycm_lsp_dir_examples . '/bash/node_modules/.bin/bash-language-server' ), 'start' ],
+      \     'filetypes': [ 'sh', 'bash' ],
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
