@@ -192,6 +192,27 @@ via distribution package manager, eg...
    pkg install rust
    ```
 
+- LSP clients
+
+   ```bash
+   mkdir "${HOME}/git/hub/ycm-core"
+   pushd "${_}"
+   git clone git@github.com:ycm-core/lsp-examples.git
+   pushd "lsp-examples"
+   ## Un-comment/run the following if errors are raised
+   # git remote add fork git@github.com:S0AndS0/lsp-examples.git
+   # git fetch fork
+   ./install.py \
+     --enable-astro \
+     --enable-bash \
+     --enable-css \
+     --enable-docker \
+     --enable-erlang \
+     --enable-postgres \
+     --enable-ruby
+   ```
+
+
 
 ---
 
