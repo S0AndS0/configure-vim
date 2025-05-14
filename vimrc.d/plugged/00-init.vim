@@ -154,6 +154,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/context.vim'
 
   ""
+  "
+  Plug 'wuelnerdotexe/vim-astro'
+
+  ""
   " Auto completion engine for Vim
   "   --clang-completer  $> sudo apt-get install g++-8
   "   --clang-completer  $> sudo pacman -S gcc
