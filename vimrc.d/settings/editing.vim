@@ -1,4 +1,5 @@
 set spell
+set spelloptions+=camel
 
 ""
 " Thanks
