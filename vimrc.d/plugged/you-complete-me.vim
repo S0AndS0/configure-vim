@@ -85,6 +85,11 @@ let g:ycm_language_server = [
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/ruby/bin/solargraph' ), 'stdio' ],
       \   },
+      \   {
+      \     'name': 'pest',
+      \     'filetypes': [ 'pest' ],
+      \     'cmdline': [ 'pest-language-server' ],
+      \   },
       \ ]
       " \   {
       " \     'name': 'rust',
