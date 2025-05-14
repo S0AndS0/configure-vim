@@ -83,7 +83,7 @@ let g:ycm_language_server = [
       \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
-      \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
+      \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/ruby/bin/solargraph' ), 'stdio' ],
       \   },
       \ ]
       " \   {
