@@ -69,6 +69,12 @@ let g:ycm_language_server = [
       \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/docker/node_modules/.bin/docker-langserver' ), '--stdio' ]
       \   },
       \   {
+      \     'name': 'json',
+      \     'cmdline': [ 'node', expand( g:ycm_lsp_dir_examples . '/json/node_modules/.bin/vscode-json-languageserver' ), '--stdio' ],
+      \     'filetypes': [ 'json' ],
+      \     'capabilities': { 'textDocument': { 'completion': { 'completionItem': { 'snippetSupport': v:true } } } },
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
