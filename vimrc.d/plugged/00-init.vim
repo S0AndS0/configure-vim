@@ -57,6 +57,10 @@ call plug#begin('~/.vim/plugged')
   " Handlebars and mustache syntax support
   Plug 'mustache/vim-mustache-handlebars'
 
+   ""
+   "
+   Plug 'pest-parser/pest.vim'
+
   ""
   " https://github.com/prettier/vim-prettier#overwrite-default-prettier-configuration
   " https://github.com/rx-ts/prettier/tree/master/packages/sh
