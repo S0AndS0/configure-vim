@@ -39,7 +39,13 @@ let g:ycm_clangd_binary_path = '/usr/bin/gcc'
 " ./install
 " vim test/test.rb
 " ```
-let g:ycm_lsp_dir = $HOME . '/git/hub/ycm-core/lsp-examples'
+"
+" ```bash
+" cargo install pest-language-server
+" ```
+let g:ycm_lsp_dir_examples = $HOME . '/git/hub/ycm-core/lsp-examples'
+let g:ycm_lsp_dir_third_party = $HOME . '/.vim/plugged/YouCompleteMe/third_party/ycmd/third_party'
+let g:ycm_lsp_dir_npm = $HOME . '/.npm/bin'
 let g:ycm_language_server = [
       \   {
       \     'name': 'ruby',
