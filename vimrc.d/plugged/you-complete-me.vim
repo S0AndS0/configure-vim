@@ -48,6 +48,12 @@ let g:ycm_lsp_dir_third_party = $HOME . '/.vim/plugged/YouCompleteMe/third_party
 let g:ycm_lsp_dir_npm = $HOME . '/.npm/bin'
 let g:ycm_language_server = [
       \   {
+      \     'name': 'astro',
+      \     'filetypes': [ 'astro' ],
+      \     'cmdline': [  expand( g:ycm_lsp_dir_examples . '/astro/node_modules/@astrojs/language-server/bin/nodeServer.js' ), '--stdio' ],
+      \     'project_root_files': [ 'tsconfig.json', 'astro.config.mjs' ]
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
