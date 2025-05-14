@@ -90,6 +90,12 @@ let g:ycm_language_server = [
       \     'filetypes': [ 'pest' ],
       \     'cmdline': [ 'pest-language-server' ],
       \   },
+      \   {
+      \     'name': 'postgres',
+      \     'filetypes': [ 'sql' ],
+      \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/postgres/node_modules/.bin/postgrestools' ), 'lsp-proxy' ],
+      \     'project_root_files': [ 'postgrestools.jsonc' ]
+      \   },
       \ ]
       " \   {
       " \     'name': 'rust',
