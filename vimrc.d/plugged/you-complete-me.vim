@@ -64,6 +64,11 @@ let g:ycm_language_server = [
       \     'filetypes': [ 'css', 'sass' ],
       \   },
       \   {
+      \     'name': 'docker',
+      \     'filetypes': [ 'dockerfile' ],
+      \     'cmdline': [ expand( g:ycm_lsp_dir_examples . '/docker/node_modules/.bin/docker-langserver' ), '--stdio' ]
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
