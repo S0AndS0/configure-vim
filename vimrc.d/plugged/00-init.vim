@@ -31,6 +31,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
 
   ""
+  "
+  Plug 'junegunn/vader.vim'
+
+  ""
   " Because KDE updates to using Wayland and Wayland/GVim are not yet
   " compatible for clipboard access
   Plug 'jasonccox/vim-wayland-clipboard'
