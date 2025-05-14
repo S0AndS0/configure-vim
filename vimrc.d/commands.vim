@@ -18,3 +18,21 @@ command! MakeTags !ctags -R .
 command! -range ShellRange execute '!' . join(getline(<line1>, <line2>), ';')
 vnoremap <Leader>ex :ShellRange<CR>
 
+""
+"
+function! s:Mkdir(...) abort
+	if len(a:000)
+		let l:path = a:000[0]
+	else
+		let l:path = expand('%:h')
+	endif
+
+	if !len(l:path)
+		throw 'No directory path to make'
+	endif
+
+	return mkdir(l:path, 'p')
+endfunction
+
+command! -complete=dir -nargs=? MakeDirectory call <SID>Mkdir(<f-args>)
+
