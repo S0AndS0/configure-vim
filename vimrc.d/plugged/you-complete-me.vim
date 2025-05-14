@@ -75,6 +75,12 @@ let g:ycm_language_server = [
       \     'capabilities': { 'textDocument': { 'completion': { 'completionItem': { 'snippetSupport': v:true } } } },
       \   },
       \   {
+      \     'name': 'erlang',
+      \     'filetypes': [ 'erlang' ],
+      \     'cmdline': [  expand( g:ycm_lsp_dir_examples . '/erlang/erlang_ls/_build/default/bin/erlang_ls' ), '--transport', 'stdio' ],
+      \     'project_root_files': [ 'erlang_ls.config', 'erlang_ls.yaml' ]
+      \   },
+      \   {
       \     'name': 'ruby',
       \     'filetypes': [ 'ruby' ],
       \     'cmdline': [ expand( g:ycm_lsp_dir . '/ruby/bin/solargraph' ), 'stdio' ],
