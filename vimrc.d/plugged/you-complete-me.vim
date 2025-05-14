@@ -137,3 +137,7 @@ let g:ycm_language_server = [
 " Jump to definition
 nnoremap <Leader>jd :YcmCompleter GoTo<CR>
 
+let g:ycm_debug_info = 1
+let g:ycm_verbose_logs = 1
+let g:ycm_log_level = 'debug'
+
