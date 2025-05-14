@@ -2,11 +2,14 @@
 ""
 " Emmet configurations
 let g:user_emmet_install_global = 0
-autocmd FileType css,html,liquid,markdown,scss EmmetInstall
+autocmd FileType astro,css,html,liquid,markdown,scss EmmetInstall
 
 ""
 " Customized from `~/.vim/plugged/emmet-vim/autoload/emmet.vim`
 let g:user_emmet_settings = {
+\    'astro': {
+\      'extends': 'html',
+\    },
 \    'html': {
 \        'snippets': {
 \            'html:5': "<!DOCTYPE html>\n"
@@ -30,3 +33,4 @@ let g:user_emmet_settings = {
 \      'extends': 'css',
 \    },
 \}
+
