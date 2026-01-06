@@ -632,6 +632,14 @@ configuring the terminal emulator too;
    key_bindings:
      - { key: Return,  mods: Control,  chars: "\x1b[13;5u" }
    ```
+- Alacritty `~/.config/alacritty/alacritty.toml` (snip)
+
+   ```yaml
+   [[keyboard.bindings]]
+   chars = "\u001b[13;5u"
+   key = "Return"
+   mods = "Control"
+   ```
 
 
 ---
